@@ -21,6 +21,7 @@
     <p>이 설문지는 20-2학기 부원 모집 때 사용할 홍보용!<br>개발자용 mbti 검사입니다. 성실하게 대답해 주세요 :)</p>
 </div>
 
+<form method="POST" action="/result">
 <div class = "main_content">
     <div class="question_box">
         <div class="question_title">
@@ -30,73 +31,68 @@
             <div class="titles"><p>조금 아니다</p></div>
             <div class="titles"><p>매우 아니다</p></div>
         </div>
-        <div class="question_items">
-            {% for question in questions %}
-            <div class="question">
-                <p>{{ loop.index }}. {{ question }}</p>
+            <div class="question_items">
+                {% for question in questions %}
+                <div class="question">
+                    <p>{{ loop.index }}. {{ question }}</p>
+                </div>
+                <div class="checkboxes">
+                    <div class="checkbox">
+                        <input type="radio" id='"q"+ {{ loop.index }} + "5"' name='q{{ loop.index0 }}' value=5/>
+                        <label for='"q"+ {{ loop.index }} + "5"'></label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="radio" id='"q"+ {{ loop.index }} + "4"' name='q{{ loop.index0 }}' value=4/>
+                        <label for='"q"+ {{ loop.index }} + "4"'></label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="radio" id='"q"+ {{ loop.index }} + "3"' name='q{{ loop.index0 }}' value=3/>
+                        <label for='"q"+ {{ loop.index }} + "3"'></label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="radio" id='"q"+ {{ loop.index }} + "2"' name='q{{ loop.index0 }}' value=2/>
+                        <label for='"q"+ {{ loop.index }} + "2"'></label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="radio" id='"q"+ {{ loop.index }} + "1"' name='q{{ loop.index0 }}' value=1/>
+                        <label for='"q"+ {{ loop.index }} + "1"'></label>
+                    </div>
+                </div>
+                {% endfor %}
+                {% for track in tracks %}
+                <div class="question">
+                    <p>{{ loop.index }}. {{ track }}</p>
+                </div>
+                <div class="checkboxes">
+                    <div class="checkbox">
+                        <input type="radio" id='"t"+ {{ loop.index }} + "5"' name='"t"+{{ loop.index }}' value=5/>
+                        <label for='"t"+ {{ loop.index }} + "5"'></label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="radio" id='"t"+ {{ loop.index }} + "4"' name='"t"+{{ loop.index }}' value=4/>
+                        <label for='"t"+ {{ loop.index }} + "4"'></label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="radio" id='"t"+ {{ loop.index }} + "3"' name='"t"+{{ loop.index }}' value=3/>
+                        <label for='"t"+ {{ loop.index }} + "3"'></label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="radio" id='"t"+ {{ loop.index }} + "2"' name='"t"+{{ loop.index }}' value=2/>
+                        <label for='"t"+ {{ loop.index }} + "2"'></label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="radio" id='"t"+ {{ loop.index }} + "1"' name='"t"+{{ loop.index }}' value=1/>
+                        <label for='"t"+ {{ loop.index }} + "1"'></label>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
-            <div class="checkboxes">
-                <div class="checkbox">
-                    <input type="radio" id='"q"+ {{ loop.index }} + "1"' name='"q"+{{ loop.index }}' />
-                    <label for='"q"+ {{ loop.index }} + "1"'></label>
-                </div>
-                <div class="checkbox">
-                    <input type="radio" id='"q"+ {{ loop.index }} + "2"' name='"q"+{{ loop.index }}' />
-                    <label for='"q"+ {{ loop.index }} + "2"'></label>
-                </div>
-                <div class="checkbox">
-                    <input type="radio" id='"q"+ {{ loop.index }} + "3"' name='"q"+{{ loop.index }}' />
-                    <label for='"q"+ {{ loop.index }} + "3"'></label>
-                </div>
-                <div class="checkbox">
-                    <input type="radio" id='"q"+ {{ loop.index }} + "4"' name='"q"+{{ loop.index }}' />
-                    <label for='"q"+ {{ loop.index }} + "4"'></label>
-                </div>
-                <div class="checkbox">
-                    <input type="radio" id='"q"+ {{ loop.index }} + "5"' name='"q"+{{ loop.index }}' />
-                    <label for='"q"+ {{ loop.index }} + "5"'></label>
-                </div>
-            </div>
-            {% endfor %}
-            {% for track in tracks %}
-            <div class="question">
-                <p>{{ loop.index }}. {{ track }}</p>
-            </div>
-            <div class="checkboxes">
-                <div class="checkbox">
-                    <input type="radio" id='"t"+ {{ loop.index }} + "1"' name='"t"+{{ loop.index }}' />
-                    <label for='"t"+ {{ loop.index }} + "1"'></label>
-                </div>
-                <div class="checkbox">
-                    <input type="radio" id='"t"+ {{ loop.index }} + "2"' name='"t"+{{ loop.index }}' />
-                    <label for='"t"+ {{ loop.index }} + "2"'></label>
-                </div>
-                <div class="checkbox">
-                    <input type="radio" id='"t"+ {{ loop.index }} + "3"' name='"t"+{{ loop.index }}' />
-                    <label for='"t"+ {{ loop.index }} + "3"'></label>
-                </div>
-                <div class="checkbox">
-                    <input type="radio" id='"t"+ {{ loop.index }} + "4"' name='"t"+{{ loop.index }}' />
-                    <label for='"t"+ {{ loop.index }} + "4"'></label>
-                </div>
-                <div class="checkbox">
-                    <input type="radio" id='"t"+ {{ loop.index }} + "5"' name='"t"+{{ loop.index }}' />
-                    <label for='"t"+ {{ loop.index }} + "5"'></label>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
+    </div>
+    <div class="sub_mit">
+    <input type="submit" value="제출!">
     </div>
 </div>
 
-<div class="sub_mit">
-  <div class="button">
-    <div class="text">Submit</div>
-  </div>
-  <div class="progress-bar"></div>
-  <svg x="0px" y="0px" viewBox="0 0 25 30" style="enable-background:new 0 0 25 30;">
-    <path class="check" class="st0" d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2"/>
-  </svg>
-</div>
+</form>
 </body>
 </html>
