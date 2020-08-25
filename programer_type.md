@@ -4,11 +4,11 @@ HDTI 개발자 유형
 ***
 ![해달캐릭터](./images/해달캐릭터.png)
 왼쪽부터   **사스미 시라용 흐규 해달이 부기 아리 매기 김두근**
-* AREI
-* AREP
-* ARCI
-* ARCP
-* AFEI
-* AFEP
-* AFCI
-* AFCP
+ ### * AREI : 괴짜 프로그래머형
+### * AREP : 
+### * ARCI :
+### * ARCP : 알파고형
+### * AFEI :
+### * AFEP :
+### * AFCI :
+### * AFCP :
