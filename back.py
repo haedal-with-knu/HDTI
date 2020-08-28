@@ -1,5 +1,0 @@
-img = '../static/pictures/haedal.jpg'
-type = 'INFP-A'
-explanation = '당신은 개똑똑해요'
-track1 = '트랙1234'
-track2 = '트랙2345'

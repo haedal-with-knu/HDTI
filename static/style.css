@@ -267,3 +267,23 @@ margin: auto;
 .sub_mit{
 height: 500px;
 }
+
+/* FOR types.html */
+.out-out{
+width: 50%;
+margin: auto;
+text-align: center;
+}
+.row{
+display: flex;
+justify-content:center;
+}
+.indiv{
+width:  25%;
+height: 25%;
+}
+
+.info{
+width: 50%;
+margin: auto;
+}
