@@ -2,6 +2,32 @@
 
 {% block title %} RESULT {% endblock %}
 {% block content %}
-내용이 들어갈 곳입니도.
-
+<div class="titlebox">
+    <div class="title">
+        <p class="p1">당신의 해달 타입은</p>
+        <p class="p2">" {{ type_ex }} "</p>
+    </div>
+</div>
+<div class="contentbox">
+    <div class="content">
+        <div class="content-left">
+            <img src={{ img }} class="img">
+        </div>
+        <div class="content-right">
+            <div class="type">
+                {{ type }}
+            </div>
+            <div class="explanation">
+                {{ explanation }}
+            </div>
+        </div>
+    </div>
+    <div class="track">
+        추천 트랙: {{ tracks }}
+    </div>
+    <div class="result">
+        <span><a href="../">retry</a></span>
+        <span style="bottom"><a href="../types">Another type</a></span>
+    </div>
+</div>
 {% endblock %}

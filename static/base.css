@@ -1,0 +1,66 @@
+@font-face {
+font-family: 'NeoDunggeunmo';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+body{
+font-family: 'NeoDunggeunmo';
+}
+
+.title{
+margin: auto;
+text-align: center;
+}
+.p1{
+font-size: 30px;
+}
+.p2{
+font-size: 60px;
+}
+
+.content{
+width: 600px;
+height: 500px;
+margin: 0 auto 60px;
+display: flex;
+border : solid 1px gray;
+border-radius: 80px
+}
+
+.content-left{
+margin: auto;
+text-align: center;
+flex: 3;
+}
+.img{
+width: 200px;
+}
+
+.content-right{
+text-align: center;
+flex: 4;
+padding: 10px;
+
+}
+.type{
+margin-top: 50px;
+font-size: 60px;
+}
+.explanation{
+margin-top: 50px;
+font-size: 20px;
+line-height: 200%;
+}
+
+.track, .bottom{
+text-align: center;
+margin: 10px;
+}
+
+.result{
+font-size: 16px;
+margin:auto;
+text-align:center;
+}

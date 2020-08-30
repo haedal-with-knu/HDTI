@@ -1,5 +1,3 @@
-        <!-- 파이썬 파일이랑 연동해서 for구문 정도 넣으면 될 듯
-
         <tr>
             <td colspan="5" class="tdquestion"><p>조혜민 똥멍청이 공부 좀 하자.&lt;&lt;ㄹㅇㅋㅋ</p></td>
         </tr>
@@ -60,4 +58,16 @@
                 </div>
             </th>
         </tr>
-        -->
+        
+        
+        
+        
+<div class="sub_mit">
+    <div class="button">
+        <div class="text">Submit</div>
+    </div>
+    <div class="progress-bar"></div>
+    <svg x="0px" y="0px" viewBox="0 0 25 30" style="enable-background:new 0 0 25 30;">
+        <path class="check" class="st0" d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2"/>
+    </svg>
+</div>
