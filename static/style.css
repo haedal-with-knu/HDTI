@@ -280,9 +280,19 @@ justify-content:center;
 }
 .indiv{
 width:  25%;
-height: 25%;
+height: 100px;
+border: 1px solid gray;
+border-radius: 20px;
+margin: 5px;
+padding: 10px;
 }
-
+.indiv_title{
+font-size: 30px;
+margin: 0 0 15px;
+}
+.indiv_ex{
+font-size: 25px;
+}
 .info{
 width: 50%;
 margin: auto;
