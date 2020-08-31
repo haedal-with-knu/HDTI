@@ -22,27 +22,27 @@ def result():
         scores.append(temp)
         scores[i] = int(scores[i])
 
-    # 각 항목별 점수 계산
-    if types[i] == 'A':
-        score_A += scores[i]
-    elif types[i] == 'T':
-        score_T += scores[i]
-    elif types[i] == 'R':
-        score_R += scores[i]
-    elif types[i] == 'F':
-        score_F += scores[i]
-    elif types[i] == 'E':
-        score_E += scores[i]
-    elif types[i] == 'C':
-        score_C += scores[i]
-    elif types[i] == 'P':
-        score_P += scores[i]
-    elif types[i] == 'I':
-        score_I += scores[i]
-    elif types[i] == '개':
-        score_gae += scores[i]
-    elif types[i] == '기':
-        score_gi += scores[i]
+        # 각 항목별 점수 계산
+        if types[i] == 'A':
+            score_A += scores[i]
+        elif types[i] == 'T':
+            score_T += scores[i]
+        elif types[i] == 'R':
+            score_R += scores[i]
+        elif types[i] == 'F':
+            score_F += scores[i]
+        elif types[i] == 'E':
+            score_E += scores[i]
+        elif types[i] == 'C':
+            score_C += scores[i]
+        elif types[i] == 'P':
+            score_P += scores[i]
+        elif types[i] == 'I':
+            score_I += scores[i]
+        elif types[i] == '개':
+            score_gae += scores[i]
+        elif types[i] == '기':
+            score_gi += scores[i]
 
     # 타입 만들기
     if score_A > score_T:
@@ -185,4 +185,4 @@ def result():
 def types():
     return render_template('types.html')
 if __name__ == '__main__':
-    app.run(debug=1)
+    app.run(host='0.0.0.0')
