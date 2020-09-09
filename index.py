@@ -134,6 +134,11 @@ def result():
         type_ex = '회장의 재목'
         explanation = '태어날 때부터 이마에 ‘회장’ 두 글자를 머리에 새기고 태어났다고 해도 과언이 아닐 정도로, 무리의 장을 맡기에 가장 적합한 성격이에요. 나서기를 좋아하고, 현실적인 판단력과 지도력을 가졌으며 설득력이 좋아 남들을 쉽게 자신의 목표에 따르게 하는 재능을 가졌다. 다만 신경쓸게 많아지면 이것저것 챙기느라 집중력이 떨어질 수 있으니 주의.'
 
+    if type_5 == '개':
+        explanation2 = '아이디어를 코드로 풀어내는 것을 선호하는 개발자 유형이다. 문서 작성 시에는 주로 깃허브나 노션을 이용한다. 창의력은 부족하지만 맡은 일만큼은 훌륭하게 해낸다.'
+    elif type_5 == '기':
+        explanation2 = '아이디어를 말이나 글로 풀어내는 것을 선호하는 기획자 유형이다. 문서 작성 시에는 주로 워드나 한글을 이용한다. 상상력이 풍부하고 타인에게 일을 시키는 것을 잘 하는 편이다.'
+
     # 이제 트랙 추천, 트랙 질문은 랜덤 아니고 순서 정해져 있음 / 치어리더-프렌즈-퐁-리킹-득근-하이-빅데이터-해유-곰-세돈권
     scores_track = []
     lists_track = [
@@ -179,10 +184,10 @@ def result():
     elif track_1:
         track = sorted(track_1)
         track = ', '.join(track)
-    return render_template('result.html', img=img_src, type=type_result, explanation=explanation, tracks=track, type_ex=type_ex)
+    return render_template('result.html', img=img_src, type=type_result, explanation=explanation, explanation2=explanation2, tracks=track, type_ex=type_ex)
 
 @app.route('/types')
 def types():
     return render_template('types.html')
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='')
