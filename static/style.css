@@ -196,8 +196,8 @@ svg {
 /* 여기서부턴 내가 */
 html{
 font-family: 'NeoDunggeunmo';
-background-color: blue;
-color: #DDD;
+background-color: #6B6B6B;
+color: #D9D9D9;
 }
 
 .title{
@@ -250,10 +250,13 @@ justify-content: center;
 align-items: center;
 font-size: 20px;
 margin: 50px 0;
+position: sticky;
+top: 0;
+background-color: #6B6B6B;
 }
 
 .titles{
-padding: 30px;
+padding: 45px;
 }
 .question{
 font-size: 20px;
