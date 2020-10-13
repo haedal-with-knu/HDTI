@@ -1,19 +1,19 @@
-import loadquestion_only_csv_version
+import loadquestion
 from flask import render_template,  Flask, request
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html', questions=loadquestion_only_csv_version.questions, tracks=loadquestion_only_csv_version.tracks)
+    return render_template('index.html', questions=loadquestion.questions, tracks=loadquestion.tracks)
 
 @app.route('/result', methods=["POST"])
 def result():
     score_A = score_T = score_R = score_F = score_E = score_C = score_P = score_I = score_gae = score_gi = 0
 
-    types = [i[0] for i in loadquestion_only_csv_version.types]
+    types = [i[0] for i in loadquestion.types]
     scores = []
-    for i in range(len(loadquestion_only_csv_version.types)):
+    for i in range(len(loadquestion.types)):
         # 파라미터 변수 만들어주기
         temp_temp = 'q' + str(i)
 
@@ -150,7 +150,7 @@ def result():
     track_2 = []
     track_1 = []
 
-    for i in range(len(loadquestion_only_csv_version.tracks)):
+    for i in range(len(loadquestion.tracks)):
         temp_temp_track = 't' + str(i)
 
         # 값 받아오기 및 배열에 추가 및 정수로 형변환
@@ -190,4 +190,4 @@ def result():
 def types():
     return render_template('types.html')
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000)
+    app.run(host='0.0.0.0', port=80)
